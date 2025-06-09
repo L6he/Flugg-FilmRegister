@@ -1503,23 +1503,6 @@
           }
         }
       },
-      "Flugg_FilmRegister.ApplicationServices/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Flugg_FilmRegister.Core": "1.0.0",
-          "Flugg_FilmRegister.Data": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "8.0.16",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.16",
-          "Microsoft.Extensions.Options": "8.0.2"
-        },
-        "compile": {
-          "bin/placeholder/Flugg_FilmRegister.ApplicationServices.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Flugg_FilmRegister.ApplicationServices.dll": {}
-        }
-      },
       "Flugg_FilmRegister.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3820,11 +3803,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Flugg_FilmRegister.ApplicationServices/1.0.0": {
-      "type": "project",
-      "path": "../Flugg-FilmRegister.ApplicationServices/Flugg_FilmRegister.ApplicationServices.csproj",
-      "msbuildProject": "../Flugg-FilmRegister.ApplicationServices/Flugg_FilmRegister.ApplicationServices.csproj"
-    },
     "Flugg_FilmRegister.Core/1.0.0": {
       "type": "project",
       "path": "../Flugg-FilmRegister.Core/Flugg_FilmRegister.Core.csproj",
@@ -3838,9 +3816,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Flugg_FilmRegister.ApplicationServices >= 1.0.0",
       "Flugg_FilmRegister.Core >= 1.0.0",
-      "Microsoft.AspNetCore.Identity >= 2.3.1",
+      "Flugg_FilmRegister.Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.16",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.16",
       "Microsoft.Extensions.Options >= 8.0.2"
@@ -3853,11 +3830,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister\\Flugg_FilmRegister.csproj",
-      "projectName": "Flugg_FilmRegister",
-      "projectPath": "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister\\Flugg_FilmRegister.csproj",
+      "projectUniqueName": "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister.ApplicationServices\\Flugg_FilmRegister.ApplicationServices.csproj",
+      "projectName": "Flugg_FilmRegister.ApplicationServices",
+      "projectPath": "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister.ApplicationServices\\Flugg_FilmRegister.ApplicationServices.csproj",
       "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister\\obj\\",
+      "outputPath": "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister.ApplicationServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3879,11 +3856,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister.ApplicationServices\\Flugg_FilmRegister.ApplicationServices.csproj": {
-              "projectPath": "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister.ApplicationServices\\Flugg_FilmRegister.ApplicationServices.csproj"
-            },
             "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister.Core\\Flugg_FilmRegister.Core.csproj": {
               "projectPath": "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister.Core\\Flugg_FilmRegister.Core.csproj"
+            },
+            "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister.Data\\Flugg_FilmRegister.Data.csproj": {
+              "projectPath": "C:\\Users\\opilane\\Source\\Repos\\Flugg-FilmRegister\\Flugg-FilmRegister.Data\\Flugg_FilmRegister.Data.csproj"
             }
           }
         }
@@ -3904,10 +3881,6 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity": {
-            "target": "Package",
-            "version": "[2.3.1, )"
-          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.16, )"
@@ -3933,9 +3906,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
