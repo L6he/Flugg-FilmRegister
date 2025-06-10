@@ -9,6 +9,7 @@ using Flugg_FilmRegister.Data;
 using Flugg_FilmRegister.Models.Films;
 using System.Security.Cryptography.Xml;
 using static System.Net.Mime.MediaTypeNames;
+using System.IO;
 
 namespace Flugg_FilmRegister.Controllers
 {
@@ -92,6 +93,61 @@ namespace Flugg_FilmRegister.Controllers
                 return RedirectToAction("Index");
             }
             return RedirectToAction("Index", vm);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            if (id == null) { return NotFound(); }
+
+            var film = await _filmsServices.DetailsAsync(id);
+
+            if (film == null) { NotFound(); }
+
+            //var images = await _context.FilesToDatabase
+            //                           .Where(x => x.FilmID == id)
+            //                           .Select(y => new FilmImageViewModel
+            //                           {
+            //                               FilmID = y.ID,
+
+            //                               ImageID = y.ID,
+
+            //                               ImageData = y.ImageData,
+
+            //                               ImageTitle = y.ImageTitle,
+            //                               //😢😢😢😢😢😢😢😢😢😢😢😢😢😢
+            //                               Image = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(y.ImageData))
+            //                           }).ToArrayAsync();
+
+            var vm = new FilmDeleteViewModel();
+
+            vm.ID = film.ID;
+
+            vm.FilmName = film.FilmName;
+    
+            vm.Description = film.Description;
+
+            vm.ReleaseDate = film.ReleaseDate;
+
+            vm.Genre = film.Genre;
+
+            vm.Director = film.Director;
+
+            vm.Language = film.Language;
+
+            //vm.Image.AddRange(images);
+
+            return View(vm);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmation(Guid id)
+        {
+            var filmToDelete = await _filmsServices.Delete(id);
+
+            if (filmToDelete == null) { return RedirectToAction("Index"); }
+
+            return RedirectToAction("Index");
         }
     }
 }
