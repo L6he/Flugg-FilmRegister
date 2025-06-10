@@ -1,0 +1,15 @@
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\bin\Debug\net8.0\Flugg_FilmRegister.Core.deps.json
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\bin\Debug\net8.0\Flugg_FilmRegister.Core.dll
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\bin\Debug\net8.0\Flugg_FilmRegister.Core.pdb
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\Flugg_FilmRegister.Core.csproj.AssemblyReference.cache
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\Flugg_FilmRegister.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\Flugg_FilmRegister.Core.AssemblyInfoInputs.cache
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\Flugg_FilmRegister.Core.AssemblyInfo.cs
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\Flugg_FilmRegister.Core.csproj.CoreCompileInputs.cache
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\Flugg_FilmRegister.Core.sourcelink.json
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\Flugg_FilmRegister.Core.dll
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\refint\Flugg_FilmRegister.Core.dll
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\Flugg_FilmRegister.Core.pdb
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\ref\Flugg_FilmRegister.Core.dll
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\bin\Debug\net8.0\Flugg_FilmRegister.Core.runtimeconfig.json
+C:\Users\opilane\Source\Repos\Flugg-FilmRegister\Flugg-FilmRegister.Core\obj\Debug\net8.0\Flugg_FilmRegister.Core.genruntimeconfig.cache

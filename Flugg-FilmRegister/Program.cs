@@ -19,7 +19,7 @@ namespace Flugg_FilmRegister
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<IFilmsServices, FilmsServices>();
-            //builder.Services.AddScoped<IFileServices, FileServices>();
+            //builder.Services.AddScoped<IFileServices, FileServices>();éwé3eén 
             //builder.Services.AddScoped<IEmailsServices, EmailsServices>();
             //builder.Services.AddScoped<IAccountsServices, AccountsServices>();
             //builder.Services.AddScoped<IPlayerProfilesServices, PlayerProfilesServices>();

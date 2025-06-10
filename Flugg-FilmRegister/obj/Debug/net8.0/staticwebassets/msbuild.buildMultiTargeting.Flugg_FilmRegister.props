@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Flugg_FilmRegister.props" />
+</Project>
