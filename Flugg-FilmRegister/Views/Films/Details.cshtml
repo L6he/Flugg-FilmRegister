@@ -1,0 +1,44 @@
+﻿@model Flugg_FilmRegister.Models.Films.FilmDetailsViewModel
+
+<h1>@Html.DisplayFor(model => model.FilmName)</h1>
+
+<div>
+    <h4>Film</h4>
+    <hr />
+    <dl class="row">
+        <div class="form-group row">
+            <label asp-for="ID" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.ID)
+        </div>
+        <div class="form-group row">
+            <label asp-for="FilmName" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.FilmName)
+        </div>
+        @* @foreach (var image in Model.Image)
+        {
+            <partial name="_Images" model="image"></partial>
+        } *@
+        <div class="form-group row">
+            <label asp-for="Description" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Description)
+        </div>
+        <div class="form-group row">
+            <label asp-for="ReleaseDate" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </div>
+        <div class="form-group row">
+            <label asp-for="Genre" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Genre)
+        </div>
+        <div class="form-group row">
+            <label asp-for="Director" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Director)
+        </div>
+        <div class="form-group row">
+            <label asp-for="Language" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Language)
+        </div>
+    </dl>
+
+    <a asp-action="Index" asp-controller="Films" class="btn btn-outline-secondary">Return to index</a>
+</div>

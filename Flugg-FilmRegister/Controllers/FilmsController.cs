@@ -149,5 +149,36 @@ namespace Flugg_FilmRegister.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(Guid id /*, Guid ref*/)
+        {
+            var film = await _filmsServices.DetailsAsync(id);
+
+            if (film == null) { return NotFound(); }
+
+            //var images = await _context.FilesToDatabase
+            //    .Where(p => p.FilmID == id)
+            //    .Select(y => new FilmImageViewModel
+            //    {
+            //        FilmID = y.ID,
+            //        ImageID = y.ID,
+            //        ImageData = y.ImageData,
+            //        ImageTitle = y.ImageTitle,
+            //        Image = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(y.ImageData))
+            //    }).ToArrayAsync();
+
+            var vm = new FilmDetailsViewModel();
+            vm.ID = film.ID;
+            vm.FilmName = film.FilmName;
+            vm.Description = film.Description;
+            vm.ReleaseDate = film.ReleaseDate;
+            vm.Genre = film.Genre;
+            vm.Director = film.Director;
+            vm.Language = film.Language;
+            //vm.Image.AddRange(images);
+
+            return View(vm);
+        }
     }
 }

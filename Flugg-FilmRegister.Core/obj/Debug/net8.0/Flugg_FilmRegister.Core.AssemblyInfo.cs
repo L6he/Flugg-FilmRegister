@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Flugg_FilmRegister.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acb18fa2693361d6036de33a68831f8bf7328e1f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+198414c18820887424d0f6ba62325d52687824c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Flugg_FilmRegister.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Flugg_FilmRegister.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

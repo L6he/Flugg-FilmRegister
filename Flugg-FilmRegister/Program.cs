@@ -7,6 +7,7 @@ using Flugg_FilmRegister.Data;
 //using Flugg_FilmRegister.Security;
 
 //needs Microsoft.EntityFrameworkCore.SqlServer  for  UseSqlServer to work but it has no using for some fucking reason, that's so awesome
+//Same thing with Microsoft.AspNetCore.Identity.UI
 
 namespace Flugg_FilmRegister
 {
@@ -38,8 +39,8 @@ namespace Flugg_FilmRegister
             })
                 .AddEntityFrameworkStores<Flugg_FilmRegisterContext>()
                 .AddDefaultTokenProviders()
-                .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>("CustomEmailConfirmation");
-                //.AddDefaultUI();
+                .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>("CustomEmailConfirmation")
+                .AddDefaultUI();
 
             builder.Services.Configure<DataProtectionTokenProviderOptions>(
                 options => options.TokenLifespan = TimeSpan.FromHours(5)
