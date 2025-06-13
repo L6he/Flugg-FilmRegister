@@ -180,5 +180,37 @@ namespace Flugg_FilmRegister.Controllers
 
             return View(vm);
         }
+
+        public async Task<IActionResult> Clone(Guid? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var film = await _context.Films.FirstOrDefaultAsync(m => m.ID == id);
+
+            var cloneFilm = new Film
+            {
+                FilmName = film.FilmName,
+                Description = film.Description,
+                ReleaseDate = film.ReleaseDate,
+                Genre = film.Genre,
+                Director = film.Director,
+                Language = film.Language,
+            };
+
+            if (film == null)
+            {
+                return NotFound();
+            }
+
+            if (cloneFilm != null)
+            {
+                _context.Films.Add(cloneFilm);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("Index"); //no way it finally works
+        }
     }
 }

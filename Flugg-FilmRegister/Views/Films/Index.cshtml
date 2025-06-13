@@ -59,6 +59,8 @@
                             <br />
                             <a asp-action="Update" asp-controller="Films" asp-route-id="@film.ID" class="btn btn-info">Configure</a>
                             <br />
+                            <a asp-action="Clone" asp-controller="Films" asp-route-id="@film.ID" class="btn btn-info">Duplicate</a>
+                            <br />
                             <a asp-action="Delete" asp-controller="Films" asp-route-id="@film.ID" class="btn btn-info">Delete</a>
                         </td>
                     </tr>
