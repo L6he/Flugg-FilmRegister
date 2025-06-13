@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Flugg_FilmRegister.ApplicationServices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+198414c18820887424d0f6ba62325d52687824c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7d8e2feb646ceed7b4c6c5cf0c6910370fa1be5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Flugg_FilmRegister.ApplicationServices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Flugg_FilmRegister.ApplicationServices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

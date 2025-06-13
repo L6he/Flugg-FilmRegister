@@ -53,8 +53,8 @@ namespace Flugg_FilmRegister.ApplicationServices.Services
         {
             Film film = new();
             //set by saavis
-            film.ID = Guid.NewGuid();
             film.FilmName = dto.FilmName;
+            film.ID = Guid.NewGuid();
             film.Description = dto.Description;
             film.ReleaseDate = dto.ReleaseDate;
             film.Genre = dto.Genre;

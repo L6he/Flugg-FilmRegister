@@ -181,6 +181,87 @@ namespace Flugg_FilmRegister.Controllers
             return View(vm);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Update(Guid id)
+        {
+            if (id == null) { return NotFound(); }
+
+            var film = await _filmsServices.DetailsAsync(id);
+
+            if (film == null) { return NotFound(); }
+
+            //var images = await _context.FilesToDatabase
+            //    .Where(x => x.FilmID == id)
+            //    .Select(y => new FilmImageViewModel
+            //    {
+            //        FilmID = y.ID,
+            //        ImageID = y.ID,
+            //        ImageData = y.ImageData,
+            //        ImageTitle = y.ImageTitle,
+            //        Image = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(y.ImageData))
+            //    }).ToArrayAsync();
+
+            var vm = new FilmCreateViewModel();
+
+            vm.ID = film.ID;
+
+            vm.FilmName = film.FilmName;
+
+            vm.Description = film.Description;
+
+            vm.ReleaseDate = film.ReleaseDate;
+
+            vm.Genre = film.Genre;
+
+            vm.Director = film.Director;
+
+            vm.Language = film.Language;
+
+            //vm.Image.AddRange(images);
+
+            return View("Update", vm);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(FilmCreateViewModel vm)
+        {
+            var dto = new FilmDto()
+            {
+                ID = (Guid)vm.ID,
+
+                FilmName = vm.FilmName,
+
+                Description = vm.Description,
+
+                ReleaseDate = vm.ReleaseDate,
+
+                Genre = vm.Genre,
+
+                Director = vm.Director,
+
+                Language = vm.Language,
+
+                //Files = vm.Files,
+
+                //Image = vm.Image.Select(x => new FileToDatabaseDto
+                //{
+                //    ID = x.ImageID,
+
+                //    ImageData = x.ImageData,
+
+                //    ImageTitle = x.ImageTitle,
+
+                //    FilmID = x.FilmID,
+                //}
+                //).ToArray()
+            };
+            var result = await _filmsServices.Update(dto);
+
+            if (result == null) { return RedirectToAction("Index"); }
+            return RedirectToAction("Index", vm);
+        }
+
+
         public async Task<IActionResult> Clone(Guid? id)
         {
             if (id == null)
